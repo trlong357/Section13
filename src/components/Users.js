@@ -11,7 +11,9 @@ class Users extends Component {
       more: "Test",
     };
   }
-
+  componentWillUnmount() {
+    console.log("Users componentWillUnmount");
+  }
   toggleUsersHandler() {
     this.setState((curState) => {
       return { showUsers: !curState.showUsers };
